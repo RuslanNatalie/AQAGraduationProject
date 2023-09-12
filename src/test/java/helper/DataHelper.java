@@ -4,9 +4,13 @@ import configuration.ReadProperties;
 import models.User;
 import models.create_project.Project;
 import models.create_project.Role;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import tests.positive.UploadFileTest;
 
 public class DataHelper {
+    static Logger logger = LogManager.getLogger(DataHelper.class);
+
     private static String initFilePath(String mFileName) {
         String pathToFile = UploadFileTest.class.getClassLoader().getResource(mFileName).getPath();
         return pathToFile.substring(1, pathToFile.length());
