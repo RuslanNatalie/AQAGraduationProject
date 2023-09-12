@@ -13,4 +13,3 @@ public class StartStep extends BaseStep {
         return mTestmoLoginPage;
     }
 }
-
