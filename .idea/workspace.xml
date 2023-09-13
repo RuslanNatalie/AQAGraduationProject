@@ -4,24 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="init page_object">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/configuration/ReadProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/StartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/TestmoAuthPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/TestmoLoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/ProjectsListStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/StartStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/TestmoAuthStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/TestmoLoginStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+    <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="login flow">
+      <change afterPath="$PROJECT_DIR$/src/test/java/helper/DataHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DialogTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/PopUpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/SuccessLoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UploadFileTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/photo_2023.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TestmoAuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TestmoAuthPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TestmoLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TestmoLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ProjectsListStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ProjectsListStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/TestmoAuthStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/TestmoAuthStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/TestmoLoginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/TestmoLoginStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,33 +48,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/qa21onl/course/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/qa21onl/course/src/test/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\qa21onl\course\src" />
+      <recent name="D:\qa21onl\course\src\test\resources" />
+      <recent name="D:\qa21onl\course\src\main\resources" />
       <recent name="D:\qa21onl\course\src\main" />
+      <recent name="D:\qa21onl\course\src" />
       <recent name="D:\qa21onl\course\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="steps" />
+      <recent name="tests" />
       <recent name="pages" />
+      <recent name="models" />
+      <recent name="helper" />
+      <recent name="steps" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTest.resultTestHW">
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.UploadFileTest">
+    <configuration name="DialogTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA21ONL" />
       <extension name="coverage">
         <pattern>
@@ -84,7 +88,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.DialogTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -92,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.resultTestHW" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DialogTest.handleDialogWindowTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA21ONL" />
       <extension name="coverage">
         <pattern>
@@ -101,8 +105,61 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="METHOD_NAME" value="resultTestHW" />
+      <option name="MAIN_CLASS_NAME" value="tests.DialogTest" />
+      <option name="METHOD_NAME" value="handleDialogWindowTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="QA21ONL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UploadFileTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadFileTest.handleDialogWindowTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="QA21ONL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UploadFileTest" />
+      <option name="METHOD_NAME" value="handleDialogWindowTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadFileTest.handleUploadFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="QA21ONL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UploadFileTest" />
+      <option name="METHOD_NAME" value="handleUploadFileTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -112,8 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTest.resultTestHW" />
-        <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.UploadFileTest" />
+        <item itemvalue="TestNG.UploadFileTest.handleUploadFileTest" />
+        <item itemvalue="TestNG.UploadFileTest.handleDialogWindowTest" />
+        <item itemvalue="TestNG.DialogTest" />
+        <item itemvalue="TestNG.DialogTest.handleDialogWindowTest" />
       </list>
     </recent_temporary>
   </component>
@@ -128,6 +188,7 @@
       <workItem from="1694448019562" duration="388000" />
       <workItem from="1694448412609" duration="8629000" />
       <workItem from="1694461132121" duration="3740000" />
+      <workItem from="1694626357248" duration="20679000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1694448214329</created>
@@ -168,19 +229,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -196,9 +245,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/steps/TestmoAuthStep.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/src/test/java/steps/ProjectsListStep.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

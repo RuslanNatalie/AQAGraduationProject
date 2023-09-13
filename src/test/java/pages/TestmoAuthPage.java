@@ -39,9 +39,9 @@ public class TestmoAuthPage extends BasePage {
         return $(testmoCheckBoxLocator);
     }
 
-    public void insertTestmoLoginAndPassword() {
-        getTestmoEmailFieldLocator().sendKeys(ReadProperties.getTestmoLogin());
-        getTestmoPasswordFieldLocator().sendKeys(ReadProperties.getTestmoPassword());
+    public void insertTestmoLoginAndPassword(String login,String password) {
+        getTestmoEmailFieldLocator().sendKeys(login);
+        getTestmoPasswordFieldLocator().sendKeys(password);
     }
 
     public void loginButtonClick() {

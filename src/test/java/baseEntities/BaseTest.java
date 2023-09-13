@@ -4,8 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import configuration.ReadProperties;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 import steps.*;
 import org.apache.log4j.Logger;
 
@@ -20,7 +19,7 @@ public class BaseTest {
 
     static Logger logger = Logger.getLogger(BaseTest.class);
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         org.apache.log4j.BasicConfigurator.configure();
@@ -37,6 +36,7 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         Configuration.fastSetValue = true;
         Configuration.headless = false;
+        Configuration.holdBrowserOpen=true;
     }
 
     private void initSteps() {

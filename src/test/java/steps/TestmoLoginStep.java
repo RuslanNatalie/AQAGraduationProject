@@ -8,9 +8,9 @@ public class TestmoLoginStep extends BaseStep {
         super();
     }
 
-    public TestmoAuthPage setTestmoAccount() {
+    public TestmoAuthPage setTestmoAccount(String testmoAccount) {
         mTestmoLoginPage.loginAccountAreaClick();
-        mTestmoLoginPage.insertTestmoAccount();
+        mTestmoLoginPage.insertTestmoAccount(testmoAccount);
         mTestmoLoginPage.goButtonClick();
         return mTestmoAuthPage;
     }

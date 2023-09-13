@@ -38,8 +38,8 @@ public class TestmoLoginPage extends BasePage {
         getTestmoAccountButtonLocatorButton().click();
     }
 
-    public void insertTestmoAccount() {
-        getTestmoAccountEmailFieldLocator().sendKeys(ReadProperties.getTestmoAccount());
+    public void insertTestmoAccount(String testmoAccount) {
+        getTestmoAccountEmailFieldLocator().sendKeys(testmoAccount);
     }
 
     public void goButtonClick() {
