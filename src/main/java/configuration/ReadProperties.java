@@ -24,6 +24,9 @@ public class ReadProperties {
     public static String getToken() {
         return properties.getProperty("token");
     }
+    public static String getTokenFalse() {
+        return properties.getProperty("token_false");
+    }
     public static String getTestmoAccount() {
         return properties.getProperty("testmo_account");
     }

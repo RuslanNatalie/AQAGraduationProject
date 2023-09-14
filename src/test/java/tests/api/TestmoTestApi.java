@@ -2,9 +2,7 @@ package tests.api;
 
 import baseEntities.BaseTestApi;
 import configuration.ReadProperties;
-import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
-import org.apache.http.protocol.HTTP;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
@@ -17,18 +15,50 @@ public class TestmoTestApi extends BaseTestApi {
     static Logger logger = LogManager.getLogger(TestmoTestApi.class);
 
     @Test
-    public void getUser() {
+    public void getUsers() {
 
         logger.info(authentication);
 
         given()
                 .auth().oauth2(ReadProperties.getToken())
-                .header(HTTP.CONTENT_TYPE, ContentType.JSON)
                 .when()
-                .get(Endpoints.GET_USER)
+                .get(Endpoints.GET_USERS)
                 .then()
                 .log().status()
                 .log().body()
                 .statusCode(HttpStatus.SC_OK);
+    }
+
+    @Test
+    public void getUsersId() {
+
+        int userID = 2;
+        String endpoint = "/api/users/" + userID;
+
+        logger.info(authentication);
+
+        given()
+                .auth().oauth2(ReadProperties.getToken())
+                .when()
+                .get(endpoint)
+                .then()
+                .log().status()
+                .log().body()
+                .statusCode(HttpStatus.SC_OK);
+    }
+
+    @Test
+    public void getRoles() {
+
+            logger.info(authentication);
+
+            given()
+                    .auth().oauth2(ReadProperties.getTokenFalse())
+                    .when()
+                    .get(Endpoints.GET_ROLES)
+                    .then()
+                    .log().status()
+                    .log().body()
+                    .statusCode(HttpStatus.SC_OK);
     }
 }
