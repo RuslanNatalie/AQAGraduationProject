@@ -3,45 +3,28 @@ package tests.api;
 import baseEntities.BaseApiTest;
 import configuration.ReadProperties;
 import io.restassured.http.ContentType;
-import io.restassured.http.Method;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import org.apache.http.HttpStatus;
 import org.apache.http.protocol.HTTP;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.Endpoints;
+
 import static io.restassured.RestAssured.given;
 
 public class TestRailApiTest extends BaseApiTest {
     static Logger logger = LogManager.getLogger(TestRailApiTest.class);
 
     @Test
-    public void getAllUsers() {
-        String endpoint = "/api/v1/project/5/users?page=2";
-
-        RequestSpecification httpRequest = given();
-//        httpRequest.header(HTTP.CONTENT_TYPE, ContentType.JSON);
-        httpRequest.auth().preemptive().basic(ReadProperties.getTestmoAccount(), ReadProperties.getTestmoPassword());
-
-        logger.info(httpRequest.log().all());
-        Response response = httpRequest.request(Method.GET, endpoint);
-
-        Assert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK);
-
-        logger.info(response.getBody().asPrettyString());
-    }
-
-    @Test
     public void getAllUsers1() {
-        String endpoint = "/api/v1/project/5/users?page=2";
+
+        logger.info(token);
 
         given()
-                .auth().preemptive().basic(ReadProperties.getTestmoAccount(), ReadProperties.getTestmoPassword())
-//                .header(HTTP.CONTENT_TYPE, ContentType.JSON)
+                .auth().oauth2(ReadProperties.getToken())
+                .header(HTTP.CONTENT_TYPE, ContentType.JSON)
                 .when()
-                .get(endpoint)
+                .get(Endpoints.GET_ALL_USERS)
                 .then()
                 .log().status()
                 .log().body()
