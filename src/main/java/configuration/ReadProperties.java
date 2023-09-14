@@ -15,12 +15,15 @@ public class ReadProperties {
         }
     }
 
-
-
     public static String getUrl() {
         return properties.getProperty("url");
     }
-
+    public static String getUrlApi() {
+        return properties.getProperty("url_api");
+    }
+    public static String getToken() {
+        return properties.getProperty("token");
+    }
     public static String getTestmoAccount() {
         return properties.getProperty("testmo_account");
     }
