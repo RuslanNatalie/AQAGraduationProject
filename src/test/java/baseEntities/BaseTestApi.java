@@ -4,8 +4,7 @@ import configuration.ReadProperties;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeTest;
 
-public class BaseApiTest {
-    protected String token;
+public class BaseTestApi {
 
     @BeforeTest
     public void setupUriApi() {
