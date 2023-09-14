@@ -2,9 +2,8 @@ package baseEntities;
 
 import pages.*;
 
-
 public class BaseStep {
-    protected StartPage mStartPage; //начальная страница
+    protected StartPage mStartPage;
     protected TestmoLoginPage mTestmoLoginPage;
     protected TestmoAuthPage mTestmoAuthPage;
     protected ProjectsListPage mProjectsListPage;

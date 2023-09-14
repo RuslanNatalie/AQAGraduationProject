@@ -9,6 +9,5 @@ public class BaseTestApi {
     @BeforeTest
     public void setupUriApi() {
         RestAssured.baseURI = ReadProperties.getUrlApi();
-        RestAssured.oauth2(ReadProperties.getToken());
     }
 }
