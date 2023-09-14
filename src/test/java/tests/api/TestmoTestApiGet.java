@@ -11,8 +11,8 @@ import utils.Endpoints;
 import static io.restassured.RestAssured.authentication;
 import static io.restassured.RestAssured.given;
 
-public class TestmoTestApi extends BaseTestApi {
-    static Logger logger = LogManager.getLogger(TestmoTestApi.class);
+public class TestmoTestApiGet extends BaseTestApi {
+    static Logger logger = LogManager.getLogger(TestmoTestApiGet.class);
 
     @Test
     public void getUsers() {
