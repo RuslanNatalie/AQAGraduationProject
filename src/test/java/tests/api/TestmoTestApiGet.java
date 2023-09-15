@@ -47,15 +47,15 @@ public class TestmoTestApiGet extends BaseTestApi {
     @Test
     public void getRoles() {
 
-            logger.info(authentication);
+        logger.info(authentication);
 
-            given()
-                    .auth().oauth2(ReadProperties.getTokenFalse())
-                    .when()
-                    .get(Endpoints.GET_ROLES)
-                    .then()
-                    .log().status()
-                    .log().body()
-                    .statusCode(HttpStatus.SC_OK);
+        given()
+                .auth().oauth2(ReadProperties.getTokenFalse())
+                .when()
+                .get(Endpoints.GET_ROLES)
+                .then()
+                .log().status()
+                .log().body()
+                .statusCode(HttpStatus.SC_OK);
     }
 }
