@@ -10,8 +10,8 @@ import utils.Endpoints;
 import static io.restassured.RestAssured.authentication;
 import static io.restassured.RestAssured.given;
 
-public class TestmoTestApiGet extends BaseTestApi {
-    static Logger logger = LogManager.getLogger(TestmoTestApiGet.class);
+public class TestApiGet extends BaseTestApi {
+    static Logger logger = LogManager.getLogger(TestApiGet.class);
 
     @Test
     public void getUsers() {
