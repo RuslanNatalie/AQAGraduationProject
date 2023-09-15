@@ -8,8 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 import utils.Endpoints;
-import static io.restassured.RestAssured.authentication;
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 
 public class TestApiPostJson extends BaseTestApi {
 
@@ -24,13 +23,18 @@ public class TestApiPostJson extends BaseTestApi {
         expectedAutoRun.setAutoRunName("Run 1");
         expectedAutoRun.setSourceName("frontend");
 
-        given()
+        int id = given()
                 .body(expectedAutoRun, ObjectMapperType.GSON)
                 .log().all()
                 .when()
                 .post(Endpoints.CREATE_AUTO_RUN)
                 .then()
                 .log().body()
-                .statusCode(HttpStatus.SC_CREATED);
+                .statusCode(HttpStatus.SC_CREATED)
+                .extract()
+                .jsonPath()
+                .getInt("id");
+
+        logger.info(id);
     }
 }
