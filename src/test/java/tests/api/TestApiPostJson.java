@@ -1,23 +1,22 @@
 package tests.api;
 
 import baseEntities.BaseTestApi;
+import io.restassured.mapper.ObjectMapperType;
 import models.AutoRun;
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 import utils.Endpoints;
-import java.util.HashMap;
-import java.util.Map;
 import static io.restassured.RestAssured.authentication;
 import static io.restassured.RestAssured.given;
 
-public class TestmoTestApiPost extends BaseTestApi {
+public class TestApiPostJson extends BaseTestApi {
 
-    static Logger logger = LogManager.getLogger(TestmoTestApiPost.class);
+    static Logger logger = LogManager.getLogger(TestApiPost.class);
 
     @Test
-    public void postAutoRun() {
+    public void postAutoRunGson() {
 
         logger.info(authentication);
 
@@ -25,12 +24,9 @@ public class TestmoTestApiPost extends BaseTestApi {
         expectedAutoRun.setAutoRunName("Run 1");
         expectedAutoRun.setSourceName("frontend");
 
-        Map<String, Object> jsonMap = new HashMap<>();
-        jsonMap.put("name", expectedAutoRun.getAutoRunName());
-        jsonMap.put("source", expectedAutoRun.getSourceName());
-
         given()
-                .body(jsonMap)
+                .body(expectedAutoRun, ObjectMapperType.GSON)
+                .log().all()
                 .when()
                 .post(Endpoints.CREATE_AUTO_RUN)
                 .then()
