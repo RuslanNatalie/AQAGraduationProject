@@ -1,7 +1,7 @@
 package tests.api;
 
 import baseEntities.BaseTestApi;
-import models.Project;
+import models.AutoRun;
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,17 +17,17 @@ public class TestmoTestApiPost extends BaseTestApi {
     static Logger logger = LogManager.getLogger(TestmoTestApiPost.class);
 
     @Test
-    public void getAllUsers() {
+    public void postAutoRun() {
 
         logger.info(authentication);
 
-        Project expectedProject = new Project();
-        expectedProject.setProjectName("Run 1");
-        expectedProject.setAnnouncement("frontend");
+        AutoRun expectedAutoRun = new AutoRun();
+        expectedAutoRun.setAutoRunName("Run 1");
+        expectedAutoRun.setSourceName("frontend");
 
         Map<String, Object> jsonMap = new HashMap<>();
-        jsonMap.put("name", expectedProject.getProjectName());
-        jsonMap.put("source", expectedProject.getAnnouncement());
+        jsonMap.put("name", expectedAutoRun.getAutoRunName());
+        jsonMap.put("source", expectedAutoRun.getSourceName());
 
         given()
                 .body(jsonMap)
