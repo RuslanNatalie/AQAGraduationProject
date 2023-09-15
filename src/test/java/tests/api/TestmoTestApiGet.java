@@ -20,7 +20,6 @@ public class TestmoTestApiGet extends BaseTestApi {
         logger.info(authentication);
 
         given()
-                .auth().oauth2(ReadProperties.getToken())
                 .when()
                 .get(Endpoints.GET_USERS)
                 .then()
@@ -38,7 +37,6 @@ public class TestmoTestApiGet extends BaseTestApi {
         logger.info(authentication);
 
         given()
-                .auth().oauth2(ReadProperties.getToken())
                 .when()
                 .get(endpoint)
                 .then()
