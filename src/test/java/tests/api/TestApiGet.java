@@ -30,8 +30,8 @@ public class TestApiGet extends BaseTestApi {
     @Test
     public void getUsersId() {
 
-        int userID = 2;
-        String endpoint = "/api/users/" + userID;
+        int autoRunID = 30;
+        String endpoint = "/api/v1/automation/runs/" + autoRunID;
 
         logger.info(authentication);
 
