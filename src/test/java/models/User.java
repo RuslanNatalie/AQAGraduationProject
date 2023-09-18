@@ -15,8 +15,8 @@ import lombok.*;
 public class User {
     private String name;
 
-    @EqualsAndHashCode.Exclude
-    private int page;
+//    @EqualsAndHashCode.Exclude
+//    private int page;
 
 //    private String timezone;
 //    private String password;
