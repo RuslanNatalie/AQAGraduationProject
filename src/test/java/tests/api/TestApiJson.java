@@ -10,10 +10,9 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Endpoints;
-
 import static io.restassured.RestAssured.*;
 
-public class TestApiPostJson extends BaseTestApi {
+public class TestApiJson extends BaseTestApi {
 
     static Logger logger = LogManager.getLogger(TestApiPost.class);
 
@@ -43,12 +42,9 @@ public class TestApiPostJson extends BaseTestApi {
 
     @Test
     public void getUser() {
-
         User expectedUser = User.builder()
             .name("Natalie")
-//            .timezone(null)
-//            .dateFormat(null)
-//            .timeFormat(null)
+            .timezone("Europe/Minsk")
             .build();
 
         User actualUser = given()
