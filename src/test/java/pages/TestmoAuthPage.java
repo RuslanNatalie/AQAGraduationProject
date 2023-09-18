@@ -1,7 +1,8 @@
 package pages;
 
 import baseEntities.BasePage;
-import configuration.ReadProperties;
+import com.codeborne.selenide.Condition;
+import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -14,6 +15,8 @@ public class TestmoAuthPage extends BasePage {
     private final By testmoEmailLocator = By.xpath("//input[@placeholder='Email']");
     private final By testmoPasswordLocator = By.xpath("//input[@placeholder='Password']");
     private final By testmoCheckBoxLocator = By.xpath("//*[@class='ui checkbox checked']");
+    private final By testmoLoginErrorMessageLocator = By.xpath("//*[@class='message-block message-block--negative message-block--scroll']");
+
     public TestmoAuthPage() {
         super();
     }
@@ -39,13 +42,30 @@ public class TestmoAuthPage extends BasePage {
         return $(testmoCheckBoxLocator);
     }
 
-    public void insertTestmoLoginAndPassword(String login,String password) {
-        getTestmoEmailFieldLocator().sendKeys(login);
-        getTestmoPasswordFieldLocator().sendKeys(password);
+    public WebElement getTestmoLoginErrorMessageLocator() {
+        return $(testmoLoginErrorMessageLocator);
     }
+
+
+    public void insertTestmoLoginAndPassword(User user) {
+        getTestmoEmailFieldLocator().sendKeys(user.getLogin());
+        getTestmoPasswordFieldLocator().sendKeys(user.getPassword());
+    }
+
+    public void insertTestmoLoginAndPasswordIncorrectData(User user) {
+        getTestmoEmailFieldLocator().sendKeys("incorrect_data");
+        getTestmoPasswordFieldLocator().sendKeys(user.getPassword());
+    }
+
 
     public void loginButtonClick() {
         getTestmoLogintButtonLocator().click();
+    }
+
+    public String loginButtonIncorrectDataClick() {
+        getTestmoLogintButtonLocator().click();
+        $(getTestmoLoginErrorMessageLocator()).shouldBe(Condition.visible);
+        return getTestmoLoginErrorMessageLocator().getText();
     }
 
     public void disableCheckBox() {

@@ -1,8 +1,6 @@
-package tests;
+package tests.positive;
 
 import baseEntities.BaseTest;
-import helper.DataHelper;
-import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,12 +12,9 @@ public class UploadFileTest extends BaseTest {
         return pathToFile.substring(1, pathToFile.length());
     }
 
-    @Test
+    @Test(description = "Тест на загрузку файла изображения во время создания проекта", groups = "positive")
     public void handleUploadFileTest() {
-        User mUser = DataHelper.getFirsCorrectUser();
-        mStartStep.loginButtonClick().isPageOpened();
-        mTestmoLoginStep.setTestmoAccount(mUser.getTestmoAccount()).isPageOpened();
-        mTestmoAuthStep.login(mUser).isPageOpened();
+        defaultUserLogin();
         mProjectsListStep.openAddProjectDialogWindow();
         mProjectsListStep.uploadImage(initFilePath());
         Assert.assertTrue(mProjectsListStep.checkSuccessUpload());

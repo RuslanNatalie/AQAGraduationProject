@@ -42,6 +42,7 @@ public class TestmoLoginPage extends BasePage {
         getTestmoAccountEmailFieldLocator().sendKeys(testmoAccount);
     }
 
+
     public void goButtonClick() {
         getTestmoGOButtonLocator().click();
     }

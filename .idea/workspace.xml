@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="login flow">
-      <change afterPath="$PROJECT_DIR$/src/test/java/helper/DataHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DialogTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/PopUpTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/SuccessLoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UploadFileTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/photo_2023.jpg" afterDir="false" />
+    <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TestmoAuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TestmoAuthPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TestmoLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TestmoLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ProjectsListStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ProjectsListStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/TestmoAuthStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/TestmoAuthStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/TestmoLoginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/TestmoLoginStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -42,53 +28,87 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="init" />
+        <option name="rewordedMessage" value="File upload test&#10;login flow&#10;init" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="f75ee7587e42ff179841fa29744374233b6edcee" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="0d0af73b-3fed-47a6-886f-a67855c2ec6a" />
+        <option name="url" value="https://github.com/RuslanNatalie/AQAGraduationProject.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="2VG2IWe05oRLwNDjYtfbB42wpaa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/qa21onl/course/src/test/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/qa21onl/course&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\qa21onl\course\src\test\resources" />
+      <recent name="D:\qa21onl\course\src\test\java\elements" />
       <recent name="D:\qa21onl\course\src\main\resources" />
+      <recent name="D:\qa21onl\course\src\test\resources" />
       <recent name="D:\qa21onl\course\src\main" />
       <recent name="D:\qa21onl\course\src" />
-      <recent name="D:\qa21onl\course\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tests" />
-      <recent name="pages" />
+      <recent name="tests.negative" />
+      <recent name="tests.positive" />
       <recent name="models" />
-      <recent name="helper" />
+      <recent name="tests" />
       <recent name="steps" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UploadFileTest">
-    <configuration name="DialogTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml">
+    <configuration name="D:/qa21onl/course/src/main/resources/parallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="QA21ONL" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/parallel.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IncorrectDataTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA21ONL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.negative.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DialogTest" />
+      <option name="PACKAGE_NAME" value="tests.negative" />
+      <option name="MAIN_CLASS_NAME" value="tests.negative.IncorrectDataTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -96,17 +116,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DialogTest.handleDialogWindowTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="IncorrectDataTest.deleteProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA21ONL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.negative.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DialogTest" />
-      <option name="METHOD_NAME" value="handleDialogWindowTest" />
+      <option name="PACKAGE_NAME" value="tests.negative" />
+      <option name="MAIN_CLASS_NAME" value="tests.negative.IncorrectDataTest" />
+      <option name="METHOD_NAME" value="deleteProjectTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -114,34 +134,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UploadFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="IncorrectLengthFieldTest.createProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA21ONL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.negative.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UploadFileTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UploadFileTest.handleDialogWindowTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="QA21ONL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UploadFileTest" />
-      <option name="METHOD_NAME" value="handleDialogWindowTest" />
+      <option name="PACKAGE_NAME" value="tests.negative" />
+      <option name="MAIN_CLASS_NAME" value="tests.negative.IncorrectLengthFieldTest" />
+      <option name="METHOD_NAME" value="createProjectTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -149,17 +152,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UploadFileTest.handleUploadFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="IncorrectLengthFieldTest.incorrectLengthFieldTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA21ONL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.negative.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UploadFileTest" />
-      <option name="METHOD_NAME" value="handleUploadFileTest" />
+      <option name="PACKAGE_NAME" value="tests.negative" />
+      <option name="MAIN_CLASS_NAME" value="tests.negative.IncorrectLengthFieldTest" />
+      <option name="METHOD_NAME" value="incorrectLengthFieldTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -169,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UploadFileTest" />
-        <item itemvalue="TestNG.UploadFileTest.handleUploadFileTest" />
-        <item itemvalue="TestNG.UploadFileTest.handleDialogWindowTest" />
-        <item itemvalue="TestNG.DialogTest" />
-        <item itemvalue="TestNG.DialogTest.handleDialogWindowTest" />
+        <item itemvalue="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml" />
+        <item itemvalue="TestNG.IncorrectLengthFieldTest.incorrectLengthFieldTest" />
+        <item itemvalue="TestNG.IncorrectLengthFieldTest.createProjectTest" />
+        <item itemvalue="TestNG.IncorrectDataTest.deleteProjectTest" />
+        <item itemvalue="TestNG.IncorrectDataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +191,18 @@
       <workItem from="1694448019562" duration="388000" />
       <workItem from="1694448412609" duration="8629000" />
       <workItem from="1694461132121" duration="3740000" />
-      <workItem from="1694626357248" duration="20679000" />
+      <workItem from="1694626357248" duration="20881000" />
+      <workItem from="1694800517161" duration="11818000" />
+      <workItem from="1695060419991" duration="5287000" />
+      <workItem from="1695072076873" duration="4546000" />
+      <workItem from="1695146909246" duration="4618000" />
+      <workItem from="1695244518610" duration="2377000" />
+      <workItem from="1695317547371" duration="5333000" />
+      <workItem from="1695543999382" duration="59000" />
+      <workItem from="1695547312221" duration="2940000" />
+      <workItem from="1695588641245" duration="1020000" />
+      <workItem from="1695633599944" duration="1797000" />
+      <workItem from="1695814268582" duration="487000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1694448214329</created>
@@ -218,11 +232,50 @@
       <option name="project" value="LOCAL" />
       <updated>1694448497089</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="File upload test">
+      <created>1694647370696</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694647370696</updated>
+    </task>
+    <task id="LOCAL-00006" summary="добавление тестов(создание сущности,загрузка файла, настройка паралелного запуска тестов)">
+      <created>1695076057676</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695076057676</updated>
+    </task>
+    <task id="LOCAL-00007" summary="добавление тестов диалогового окна, всплывающего сообщения, удаления сущности,">
+      <created>1695246861806</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695246861806</updated>
+    </task>
+    <task id="LOCAL-00008" summary="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые">
+      <created>1695551832558</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695551832558</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -239,20 +292,39 @@
     <MESSAGE value="init" />
     <MESSAGE value="init dev" />
     <MESSAGE value="init page_object" />
-    <option name="LAST_COMMIT_MESSAGE" value="init page_object" />
+    <MESSAGE value="File upload test" />
+    <MESSAGE value="добавление тестов(создание сущности,загрузка файла, настройка паралелного запуска тестов)" />
+    <MESSAGE value="добавление тестов диалогового окна, всплывающего сообщения, удаления сущности," />
+    <MESSAGE value="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/steps/ProjectsListStep.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="31" />
+          <url>file://$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="58" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/positive/PopUpWindowTest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/AdminProjectPage.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/testng/testng/7.7.1/testng-7.7.1.jar!/org/testng/Assert.class</url>
+          <line>325</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/TestmoAuthPage.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
