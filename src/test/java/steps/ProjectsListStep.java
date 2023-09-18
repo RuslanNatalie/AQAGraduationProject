@@ -1,6 +1,8 @@
 package steps;
 
 import baseEntities.BaseStep;
+import models.create_project.Project;
+import pages.ProjectDetailsPage;
 
 public class ProjectsListStep extends BaseStep {
     public ProjectsListStep() {
@@ -11,7 +13,7 @@ public class ProjectsListStep extends BaseStep {
         return mProjectsListPage.isPopUpDisplayed();
     }
 
-    public void openAddProjectDialogWindow( ) {
+    public void openAddProjectDialogWindow() {
         mProjectsListPage.addProjectButtonClick();
     }
 
@@ -20,7 +22,12 @@ public class ProjectsListStep extends BaseStep {
     }
 
     public boolean checkSuccessUpload() {
-        return  mProjectsListPage.checkSuccessUpload();
+        return mProjectsListPage.checkSuccessUpload();
+    }
+
+    public ProjectDetailsPage createProject(Project mProject) {
+        mProjectsListPage.initProjectFields(mProject);
+        return mProjectDetailsPage;
     }
 }
 

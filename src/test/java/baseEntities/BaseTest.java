@@ -3,7 +3,9 @@ package baseEntities;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import configuration.ReadProperties;
+import helper.DataHelper;
 import io.qameta.allure.selenide.AllureSelenide;
+import models.User;
 import org.testng.annotations.*;
 import steps.*;
 import org.apache.log4j.Logger;
@@ -16,18 +18,24 @@ public class BaseTest {
     protected TestmoLoginStep mTestmoLoginStep;
     protected TestmoAuthStep mTestmoAuthStep;
     protected ProjectsListStep mProjectsListStep;
-
+    protected ProjectDetailsStep mProjectDetailsStep;
+    protected AdminProjectStep mAdminProjectStep;
     static Logger logger = Logger.getLogger(BaseTest.class);
 
     @BeforeTest
     public void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         org.apache.log4j.BasicConfigurator.configure();
-
         initSteps();
         setConfigurationProp();
         open("/");
         logger.info("Browser is started");
+    }
+
+
+    @AfterMethod
+    public void tearDown() {
+        closeWebDriver();
     }
 
     private void setConfigurationProp() {
@@ -36,7 +44,7 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         Configuration.fastSetValue = true;
         Configuration.headless = false;
-        Configuration.holdBrowserOpen=true;
+        Configuration.holdBrowserOpen = true;
     }
 
     private void initSteps() {
@@ -44,10 +52,14 @@ public class BaseTest {
         mTestmoLoginStep = new TestmoLoginStep();
         mTestmoAuthStep = new TestmoAuthStep();
         mProjectsListStep = new ProjectsListStep();
+        mProjectDetailsStep = new ProjectDetailsStep();
+        mAdminProjectStep = new AdminProjectStep();
     }
 
-    @AfterMethod
-    public void tearDown() {
-        closeWebDriver();
+    protected void defaultUserLogin(){
+        User mUser = DataHelper.getFirsCorrectUser();
+        mStartStep.loginButtonClick().isPageOpened();
+        mTestmoLoginStep.setTestmoAccount(mUser.getTestmoAccount()).isPageOpened();
+        mTestmoAuthStep.login(mUser).isPageOpened();
     }
 }

@@ -10,7 +10,7 @@ public class TestmoAuthStep extends BaseStep {
     }
 
     public ProjectsListPage login(User user) {
-        mTestmoAuthPage.insertTestmoLoginAndPassword(user.getLogin(),user.getPassword());
+        mTestmoAuthPage.insertTestmoLoginAndPassword(user);
         mTestmoAuthPage.disableCheckBox();
         mTestmoAuthPage.loginButtonClick();
         return mProjectsListPage;

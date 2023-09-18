@@ -1,6 +1,7 @@
 package pages;
 
 import baseEntities.BasePage;
+import models.create_project.Project;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -12,11 +13,16 @@ public class ProjectsListPage extends BasePage {
     private final By testmoProjectsTitleLocator = By.xpath("//*[@class='page-title__title']");
     private final By popUpLocator = By.xpath("//*[@class='popup__border']");
     private final By addProjectButtonLocator = By.xpath("//*[@class='ui basic compact button']");
-    private final By dialogWindowLocator = By.xpath("//*[@class='dialog']");
     private final By uploadImageWindowLocator = By.xpath("//*[@class='admin-projects-dialog-avatar__action']");
-    private final By uploadImageDialogLocator = By.xpath("//*[@class='dialog dialog--basic dialog--compact']");
     private final By projectImageLocator = By.xpath("//*[@class='admin-projects-dialog-avatar__avatar']/descendant::img");
     private final By fileUploadLocator = By.xpath("//input[@type='file']");
+
+    //create project locators
+    private final By projectNameLocator = By.xpath("//input[@placeholder='Project name']");
+    private final By projectSummaryLocator = By.xpath("//*[@data-target='note behavior--maxlength-counter.control']");
+    private final By createProjectButtonLocator = By.xpath("//*[@class='ui button primary']");
+
+    private final By createProjectDialogWindowLocator = By.xpath("//*[@class='dialog']");
 
     public ProjectsListPage() {
         super();
@@ -35,10 +41,6 @@ public class ProjectsListPage extends BasePage {
         return $(addProjectButtonLocator);
     }
 
-    public WebElement getDialogWindowLocator() {
-        return $(dialogWindowLocator);
-    }
-
     public WebElement getUploadImageWindowLocator() {
         return $(uploadImageWindowLocator);
     }
@@ -55,10 +57,27 @@ public class ProjectsListPage extends BasePage {
         return $(fileUploadLocator);
     }
 
+    public WebElement getProjectNameLocator() {
+        return $(projectNameLocator);
+    }
+
+    public WebElement getProjectSummaryLocator() {
+        return $(projectSummaryLocator);
+    }
+
+    public WebElement getCreateProjectButtonLocator() {
+        return $(createProjectButtonLocator);
+    }
+
+    public WebElement getCreateProjectDialogWindowLocator() {
+        return $(createProjectDialogWindowLocator);
+    }
+
     public void addProjectButtonClick() {
         getAddProjectButtonLocator().click();
     }
 
+    //загрузка выбранного изорбражения
     public void uploadImage(String pathToFile) {
         getUploadImageWindowLocator().click();
         getFileUploadLocator().sendKeys(pathToFile);
@@ -73,5 +92,12 @@ public class ProjectsListPage extends BasePage {
 
     public boolean checkSuccessUpload() {
         return getProjectImageLocator().getAttribute("src").contains("attachments");
+    }
+
+    public void initProjectFields(Project mProject) {
+        getProjectNameLocator().sendKeys(mProject.getmName());
+        getProjectSummaryLocator().sendKeys(mProject.getmSummary());
+        uploadImage(mProject.getmImagePath());
+        getCreateProjectButtonLocator().click();
     }
 }
