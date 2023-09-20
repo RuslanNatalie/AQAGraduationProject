@@ -4,6 +4,7 @@ import baseEntities.BasePage;
 import models.create_project.Project;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
@@ -23,6 +24,9 @@ public class ProjectsListPage extends BasePage {
     private final By createProjectButtonLocator = By.xpath("//*[@class='ui button primary']");
 
     private final By createProjectDialogWindowLocator = By.xpath("//*[@class='dialog']");
+    private final By createProjectDialogWindowTitleLocator = By.xpath("//*[@class='dialog__header__content']");
+    private final By createProjectPopUpLocator = By.xpath("//*[@class='inline-tip help']");
+    private final By createProjectInfoButtonLocator = By.xpath("//*[@class='fas fa-info-circle icon-inline-tip']");
 
     public ProjectsListPage() {
         super();
@@ -31,10 +35,6 @@ public class ProjectsListPage extends BasePage {
     @Override
     protected By getPageIdentifier() {
         return testmoProjectsTitleLocator;
-    }
-
-    public WebElement getPopUpLocator() {
-        return $(popUpLocator);
     }
 
     public WebElement getAddProjectButtonLocator() {
@@ -47,10 +47,6 @@ public class ProjectsListPage extends BasePage {
 
     public WebElement getProjectImageLocator() {
         return $(projectImageLocator);
-    }
-
-    public boolean isPopUpDisplayed() {
-        return $(popUpLocator).shouldBe(visible).isDisplayed();
     }
 
     public WebElement getFileUploadLocator() {
@@ -69,12 +65,32 @@ public class ProjectsListPage extends BasePage {
         return $(createProjectButtonLocator);
     }
 
-    public WebElement getCreateProjectDialogWindowLocator() {
-        return $(createProjectDialogWindowLocator);
+    public WebElement getCreateProjectDialogWindowTitleLocator() {
+        return $(createProjectDialogWindowTitleLocator);
+    }
+
+    public WebElement geCreateProjectPopUpLocator() {
+        return $(createProjectPopUpLocator);
+    }
+
+    public WebElement getCreateProjectInfoButtonLocator() {
+        return $(createProjectInfoButtonLocator);
     }
 
     public void addProjectButtonClick() {
         getAddProjectButtonLocator().click();
+    }
+
+    public String checkDialogWindowOpen() {
+        $(createProjectDialogWindowLocator).shouldBe(visible);
+        return getCreateProjectDialogWindowTitleLocator().getText();
+    }
+
+    public String checkPopUpOpen() {
+        Actions actions = new Actions(getWebDriver());
+        actions.moveToElement(getCreateProjectInfoButtonLocator()).perform();
+        $(createProjectPopUpLocator).shouldBe(visible);
+        return geCreateProjectPopUpLocator().getAttribute("data-content");
     }
 
     //загрузка выбранного изорбражения

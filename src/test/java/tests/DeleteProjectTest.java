@@ -10,7 +10,7 @@ public class DeleteProjectTest extends BaseTest {
     private final static String pagePath = "admin/projects";
 
     @Test(description = "Тест на удаление сущности проекта воспроизводящий дефект - после удаления не обновляется таблица", groups = "negative")
-    public void createProjectTest() {
+    public void deleteProjectTest() {
         defaultUserLogin();
         open(WebDriverRunner.getWebDriver().getCurrentUrl() + pagePath);
         mAdminProjectStep.removeLastProjectFromTable();

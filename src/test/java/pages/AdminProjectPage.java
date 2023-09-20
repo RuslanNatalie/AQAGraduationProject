@@ -7,12 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class AdminProjectPage extends BasePage {
 
-    private int startTableRowSize = 0;
-    private final By testProjectsTableLocator = By.xpath("//*[@data-target='components--table.table']");
-    private final By removeProjectDialogLocator = By.xpath("//*[@class='dialog dialog--negative dialog--compact']");
+    private final By tableLocator = By.xpath("//*[@data-target='components--table.table']");
+    private final By removeDialogLocator = By.xpath("//*[@class='dialog dialog--negative dialog--compact']");
     private final By approveRemoveCheckBoxLocator = By.xpath("//*[@class='ui checkbox']");
     private final By approveRemoveButtonLocator = By.xpath("//*[@class='ui negative button']");
 
@@ -22,11 +22,11 @@ public class AdminProjectPage extends BasePage {
 
     @Override
     protected By getPageIdentifier() {
-        return testProjectsTableLocator;
+        return tableLocator;
     }
 
-    public WebElement getRemoveProjectDialogLocator() {
-        return $(removeProjectDialogLocator);
+    public WebElement getRemoveDialogLocator() {
+        return $(removeDialogLocator);
     }
 
     public WebElement getApproveRemoveCheckBoxLocator() {
@@ -37,16 +37,22 @@ public class AdminProjectPage extends BasePage {
         return $(approveRemoveButtonLocator);
     }
 
-    public void parseTable() {
-        Table table = new Table(testProjectsTableLocator);
-        startTableRowSize= table.getRowSize();
+    public int parseTable() {
+        Table table = new Table(tableLocator);
+        int startTableRowSize = table.getRowSize();
         if (startTableRowSize > 1) {
             table.getCell(table.getColumns().size() - 2, startTableRowSize - 1).getAsUIElement().click();
         }
+        return startTableRowSize;
+    }
+
+    public int calculateTableRows() {
+        Table table = new Table(tableLocator);
+        return table.getRowSize();
     }
 
     public void isDialogVisible() {
-        $(getRemoveProjectDialogLocator()).shouldBe(Condition.visible);
+        $(getRemoveDialogLocator()).shouldBe(Condition.visible);
     }
 
     private void disableCheckBox() {
@@ -56,12 +62,24 @@ public class AdminProjectPage extends BasePage {
     }
 
     private void removeButtonClick() {
-        $(getRemoveProjectDialogLocator()).shouldBe(Condition.enabled);
+        $(getRemoveDialogLocator()).shouldBe(Condition.enabled);
         getApproveRemoveButtonLocator().click();
     }
 
     public void removeProject() {
         disableCheckBox();
         removeButtonClick();
+    }
+
+    public int removeWorkflow() {
+        removeButtonClick();
+        synchronized (getWebDriver()) {
+            try {
+                getWebDriver().wait(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        return calculateTableRows();
     }
 }

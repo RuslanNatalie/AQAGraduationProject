@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Main Suite" parallel="tests" thread-count="2">
+<suite name="Main Suite" parallel="tests" thread-count="7">
     <test name="SuccessLoginTest">
         <classes>
             <class name="tests.CreateProjectTest"/>
@@ -9,6 +9,26 @@
     <test name="UploadFileTest">
         <classes>
             <class name="tests.UploadFileTest"/>
+        </classes>
+    </test>
+    <test name="DeleteProjectTest">
+        <classes>
+            <class name="tests.DeleteProjectTest"/>
+        </classes>
+    </test>
+    <test name="DeleteWorkflowTest">
+        <classes>
+            <class name="tests.DeleteWorkflowTest"/>
+        </classes>
+    </test>
+    <test name="DialogWindowTest">
+        <classes>
+            <class name="tests.DialogWindowTest"/>
+        </classes>
+    </test>
+    <test name="PopUpWindowTest">
+        <classes>
+            <class name="tests.PopUpWindowTest"/>
         </classes>
     </test>
 </suite>

@@ -9,14 +9,17 @@ public class ProjectsListStep extends BaseStep {
         super();
     }
 
-    public boolean isPopUpDisplayed() {
-        return mProjectsListPage.isPopUpDisplayed();
-    }
-
     public void openAddProjectDialogWindow() {
         mProjectsListPage.addProjectButtonClick();
     }
 
+    public String getAddProjectDialogTitleTextWindow() {
+        return mProjectsListPage.checkDialogWindowOpen();
+    }
+
+    public String getAddProjectDialogPopUpText() {
+        return mProjectsListPage.checkPopUpOpen();
+    }
     public void uploadImage(String pathToFile) {
         mProjectsListPage.uploadImage(pathToFile);
     }
