@@ -1,4 +1,4 @@
-package tests;
+package tests.positive;
 
 import baseEntities.BaseTest;
 import org.testng.Assert;

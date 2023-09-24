@@ -2,10 +2,12 @@ package pages;
 
 import baseEntities.BasePage;
 import models.create_project.Project;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -27,6 +29,7 @@ public class ProjectsListPage extends BasePage {
     private final By createProjectDialogWindowTitleLocator = By.xpath("//*[@class='dialog__header__content']");
     private final By createProjectPopUpLocator = By.xpath("//*[@class='inline-tip help']");
     private final By createProjectInfoButtonLocator = By.xpath("//*[@class='fas fa-info-circle icon-inline-tip']");
+    private final By createProjectNameFieldErrorLocator = By.xpath("//*[@class='message-block message-block--negative message-block--scroll']/descendant::li");
 
     public ProjectsListPage() {
         super();
@@ -77,6 +80,11 @@ public class ProjectsListPage extends BasePage {
         return $(createProjectInfoButtonLocator);
     }
 
+    public WebElement getCreateProjectNameFieldErrorLocator() {
+        return $(createProjectNameFieldErrorLocator);
+    }
+
+
     public void addProjectButtonClick() {
         getAddProjectButtonLocator().click();
     }
@@ -115,5 +123,26 @@ public class ProjectsListPage extends BasePage {
         getProjectSummaryLocator().sendKeys(mProject.getmSummary());
         uploadImage(mProject.getmImagePath());
         getCreateProjectButtonLocator().click();
+    }
+
+    public String initProjectNameFieldEmpty() {
+        getProjectNameLocator().sendKeys("");
+        getCreateProjectButtonLocator().click();
+        $(getCreateProjectNameFieldErrorLocator()).shouldBe(visible);
+        return getCreateProjectNameFieldErrorLocator().getText();
+    }
+
+    public String initProjectNameFieldRangeNegative(int size) {
+        getProjectNameLocator().sendKeys(StringUtils.repeat("*", size));
+        getCreateProjectButtonLocator().click();
+        $(getCreateProjectNameFieldErrorLocator()).shouldBe(visible);
+        return getCreateProjectNameFieldErrorLocator().getText();
+    }
+
+    public String initProjectNameFieldPositive(int size) {
+        getProjectNameLocator().sendKeys(StringUtils.repeat("*", size));
+        getCreateProjectButtonLocator().click();
+        $(getCreateProjectNameFieldErrorLocator()).shouldBe(hidden);
+        return "";
     }
 }

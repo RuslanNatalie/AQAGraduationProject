@@ -44,7 +44,7 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         Configuration.fastSetValue = true;
         Configuration.headless = false;
-        Configuration.holdBrowserOpen = true;
+      //Configuration.holdBrowserOpen = true;
     }
 
     private void initSteps() {

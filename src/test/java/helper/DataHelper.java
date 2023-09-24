@@ -4,7 +4,7 @@ import configuration.ReadProperties;
 import models.User;
 import models.create_project.Project;
 import models.create_project.Role;
-import tests.UploadFileTest;
+import tests.positive.UploadFileTest;
 
 public class DataHelper {
     private static String initFilePath(String mFileName) {

@@ -15,5 +15,11 @@ public class TestmoAuthStep extends BaseStep {
         mTestmoAuthPage.loginButtonClick();
         return mProjectsListPage;
     }
+
+    public String loginWithIncorrectData(User user) {
+        mTestmoAuthPage.insertTestmoLoginAndPasswordIncorrectData(user);
+        mTestmoAuthPage.disableCheckBox();
+        return mTestmoAuthPage.loginButtonIncorrectDataClick();
+    }
 }
 

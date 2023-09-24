@@ -1,4 +1,4 @@
-package tests;
+package tests.negative;
 
 import baseEntities.BaseTest;
 import com.codeborne.selenide.WebDriverRunner;
