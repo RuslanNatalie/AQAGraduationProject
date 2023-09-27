@@ -1,10 +1,7 @@
-package tests.negative;
+package tests.gui.negative;
 
 import baseEntities.BaseTest;
-import com.codeborne.selenide.WebDriverRunner;
 import data.BoundaryValues;
-import helper.DataHelper;
-import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

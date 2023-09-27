@@ -3,47 +3,47 @@
 <suite name="Main Suite" parallel="tests" thread-count="10">
     <test name="SuccessLoginTest">
         <classes>
-            <class name="tests.positive.CreateProjectTest"/>
+            <class name="tests.gui.positive.CreateProjectTest"/>
         </classes>
     </test>
     <test name="UploadFileTest">
         <classes>
-            <class name="tests.positive.UploadFileTest"/>
+            <class name="tests.gui.positive.UploadFileTest"/>
         </classes>
     </test>
     <test name="DeleteWorkflowTest">
         <classes>
-            <class name="tests.positive.DeleteWorkflowTest"/>
+            <class name="tests.gui.positive.DeleteWorkflowTest"/>
         </classes>
     </test>
     <test name="DialogWindowTest">
         <classes>
-            <class name="tests.positive.DialogWindowTest"/>
+            <class name="tests.gui.positive.DialogWindowTest"/>
         </classes>
     </test>
     <test name="PopUpWindowTest">
         <classes>
-            <class name="tests.positive.PopUpWindowTest"/>
+            <class name="tests.gui.positive.PopUpWindowTest"/>
         </classes>
     </test>
     <test name="BoundaryProjectTest">
         <classes>
-            <class name="tests.positive.BoundaryProjectTest"/>
+            <class name="tests.gui.positive.BoundaryProjectTest"/>
         </classes>
     </test>
     <test name="DeleteProjectTest">
         <classes>
-            <class name="tests.negative.DeleteProjectTest"/>
+            <class name="tests.gui.negative.DeleteProjectTest"/>
         </classes>
     </test>
     <test name="IncorrectDataTest">
         <classes>
-            <class name="tests.negative.IncorrectDataTest"/>
+            <class name="tests.gui.negative.IncorrectDataTest"/>
         </classes>
     </test>
     <test name="IncorrectLengthFieldTest">
         <classes>
-            <class name="tests.negative.IncorrectLengthFieldTest"/>
+            <class name="tests.gui.negative.IncorrectLengthFieldTest"/>
         </classes>
     </test>
 </suite>

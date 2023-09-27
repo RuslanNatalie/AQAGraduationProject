@@ -1,12 +1,12 @@
 package helper;
 
 import configuration.ReadProperties;
-import models.User;
+import models.UserForUITest;
 import models.create_project.Project;
 import models.create_project.Role;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import tests.positive.UploadFileTest;
+import tests.gui.positive.UploadFileTest;
 
 public class DataHelper {
     static Logger logger = LogManager.getLogger(DataHelper.class);
@@ -16,8 +16,8 @@ public class DataHelper {
         return pathToFile.substring(1, pathToFile.length());
     }
 
-    public static User getFirsCorrectUser() {
-        User mUser = new User.Builder()
+    public static UserForUITest getFirsCorrectUser() {
+        UserForUITest mUser = new UserForUITest.Builder()
                 .withTestmoAccount(ReadProperties.getTestmoAccount())
                 .withLogin(ReadProperties.getTestmoLogin())
                 .withPassword(ReadProperties.getTestmoPassword())
@@ -25,8 +25,8 @@ public class DataHelper {
         return mUser;
     }
 
-    public static User getSecondCorrectUser() {
-        User mUser = new User.Builder()
+    public static UserForUITest getSecondCorrectUser() {
+        UserForUITest mUser = new UserForUITest.Builder()
                 .withTestmoAccount(ReadProperties.getTestmoAccount())
                 .withLogin(ReadProperties.getTestmoLogin())
                 .withPassword(ReadProperties.getTestmoPassword())
@@ -34,8 +34,8 @@ public class DataHelper {
         return mUser;
     }
 
-    public static User getIncorectdUser() {
-        User mUser = new User.Builder()
+    public static UserForUITest getIncorectdUser() {
+        UserForUITest mUser = new UserForUITest.Builder()
                 .withTestmoAccount("incorrectTestmoAccount")
                 .withLogin("incorrectLogin")
                 .withPassword("incorrectPassword")

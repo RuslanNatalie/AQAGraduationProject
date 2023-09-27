@@ -5,7 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import configuration.ReadProperties;
 import helper.DataHelper;
 import io.qameta.allure.selenide.AllureSelenide;
-import models.User;
+import models.UserForUITest;
 import org.testng.annotations.*;
 import steps.*;
 import org.apache.log4j.Logger;
@@ -44,7 +44,7 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         Configuration.fastSetValue = true;
         Configuration.headless = false;
-        //Configuration.holdBrowserOpen = true;
+        Configuration.holdBrowserOpen = true;
     }
 
     private void initSteps() {
@@ -57,7 +57,7 @@ public class BaseTest {
     }
 
     protected void defaultUserLogin(){
-        User mUser = DataHelper.getFirsCorrectUser();
+        UserForUITest mUser = DataHelper.getFirsCorrectUser();
         mStartStep.loginButtonClick().isPageOpened();
         mTestmoLoginStep.setTestmoAccount(mUser.getTestmoAccount()).isPageOpened();
         mTestmoAuthStep.login(mUser).isPageOpened();
