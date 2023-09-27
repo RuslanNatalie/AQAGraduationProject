@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="добавление тестов диалогового окна, всплывающего сообщения, удаления сущности,">
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/BoundaryValues.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/negative/IncorrectDataTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/negative/IncorrectLengthFieldTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/positive/BoundaryProjectTest.java" afterDir="false" />
+    <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parallel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/parallel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helper/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/DataHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TestmoAuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TestmoAuthPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TestmoLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TestmoLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ProjectsListStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ProjectsListStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/TestmoAuthStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/TestmoAuthStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CreateProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/positive/CreateProjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DeleteProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/negative/DeleteProjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DeleteWorkflowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/positive/DeleteWorkflowTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DialogWindowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/positive/DialogWindowTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PopUpWindowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/positive/PopUpWindowTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/UploadFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/positive/UploadFileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +28,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
@@ -56,27 +43,35 @@
     <option name="currentCommit" value="1" />
     <option name="onto" value="f75ee7587e42ff179841fa29744374233b6edcee" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="0d0af73b-3fed-47a6-886f-a67855c2ec6a" />
+        <option name="url" value="https://github.com/RuslanNatalie/AQAGraduationProject.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="2VG2IWe05oRLwNDjYtfbB42wpaa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/qa21onl/course/src/test/java/elements&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowRun.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/qa21onl/course",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\qa21onl\course\src\test\java\elements" />
@@ -204,7 +199,10 @@
       <workItem from="1695244518610" duration="2377000" />
       <workItem from="1695317547371" duration="5333000" />
       <workItem from="1695543999382" duration="59000" />
-      <workItem from="1695547312221" duration="2243000" />
+      <workItem from="1695547312221" duration="2940000" />
+      <workItem from="1695588641245" duration="1020000" />
+      <workItem from="1695633599944" duration="1797000" />
+      <workItem from="1695814268582" duration="487000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1694448214329</created>
@@ -255,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695246861806</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые">
+      <created>1695551832558</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695551832558</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +295,8 @@
     <MESSAGE value="File upload test" />
     <MESSAGE value="добавление тестов(создание сущности,загрузка файла, настройка паралелного запуска тестов)" />
     <MESSAGE value="добавление тестов диалогового окна, всплывающего сообщения, удаления сущности," />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление тестов диалогового окна, всплывающего сообщения, удаления сущности," />
+    <MESSAGE value="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
