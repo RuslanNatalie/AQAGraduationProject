@@ -2,7 +2,7 @@ package pages;
 
 import baseEntities.BasePage;
 import com.codeborne.selenide.Condition;
-import models.User;
+import models.UserForUITest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -47,12 +47,12 @@ public class TestmoAuthPage extends BasePage {
     }
 
 
-    public void insertTestmoLoginAndPassword(User user) {
+    public void insertTestmoLoginAndPassword(UserForUITest user) {
         getTestmoEmailFieldLocator().sendKeys(user.getLogin());
         getTestmoPasswordFieldLocator().sendKeys(user.getPassword());
     }
 
-    public void insertTestmoLoginAndPasswordIncorrectData(User user) {
+    public void insertTestmoLoginAndPasswordIncorrectData(UserForUITest user) {
         getTestmoEmailFieldLocator().sendKeys("incorrect_data");
         getTestmoPasswordFieldLocator().sendKeys(user.getPassword());
     }

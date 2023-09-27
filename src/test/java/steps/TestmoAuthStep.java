@@ -1,7 +1,7 @@
 package steps;
 
 import baseEntities.BaseStep;
-import models.User;
+import models.UserForUITest;
 import pages.ProjectsListPage;
 
 public class TestmoAuthStep extends BaseStep {
@@ -9,14 +9,14 @@ public class TestmoAuthStep extends BaseStep {
         super();
     }
 
-    public ProjectsListPage login(User user) {
+    public ProjectsListPage login(UserForUITest user) {
         mTestmoAuthPage.insertTestmoLoginAndPassword(user);
         mTestmoAuthPage.disableCheckBox();
         mTestmoAuthPage.loginButtonClick();
         return mProjectsListPage;
     }
 
-    public String loginWithIncorrectData(User user) {
+    public String loginWithIncorrectData(UserForUITest user) {
         mTestmoAuthPage.insertTestmoLoginAndPasswordIncorrectData(user);
         mTestmoAuthPage.disableCheckBox();
         return mTestmoAuthPage.loginButtonIncorrectDataClick();
