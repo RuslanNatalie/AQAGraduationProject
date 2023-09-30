@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="cicd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parallel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/parallel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/gui/api/TestApiGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/TestApiGet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/gui/api/TestApiJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/TestApiJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/gui/api/TestApiPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/TestApiPost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,14 +93,14 @@
       <recent name="D:\qa21onl\course\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="baseEntities" />
       <recent name="tests.negative" />
       <recent name="tests.positive" />
       <recent name="models" />
       <recent name="tests" />
-      <recent name="steps" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml">
+  <component name="RunManager" selected="TestNG.DeleteWorkflowTest">
     <configuration name="D:/qa21onl/course/src/main/resources/parallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAGraduationProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/parallel.xml" />
@@ -126,6 +121,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DeleteWorkflowTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQAGraduationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.gui.positive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.gui.positive" />
+      <option name="MAIN_CLASS_NAME" value="tests.gui.positive.DeleteWorkflowTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestApiGet" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAGraduationProject" />
       <extension name="coverage">
@@ -136,23 +148,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
       <option name="MAIN_CLASS_NAME" value="tests.api.TestApiGet" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestApiJson" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQAGraduationProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.TestApiJson" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -179,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DeleteWorkflowTest" />
         <item itemvalue="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml" />
         <item itemvalue="TestNG.D:/qa21onl/course/src/main/resources/testng.xml" />
         <item itemvalue="TestNG.TestApiGet" />
         <item itemvalue="TestNG.TestApiPost" />
-        <item itemvalue="TestNG.TestApiJson" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +214,7 @@
       <workItem from="1695936680004" duration="5218000" />
       <workItem from="1696012828022" duration="2990000" />
       <workItem from="1696073563438" duration="1328000" />
-      <workItem from="1696109316266" duration="1513000" />
+      <workItem from="1696109316266" duration="3535000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1694448214329</created>
@@ -319,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696099974674</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="cicd">
+      <created>1696111131069</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696111131069</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,11 +367,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java</url>
           <line>146</line>
           <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/AdminProjectPage.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/testng/testng/7.7.1/testng-7.7.1.jar!/org/testng/Assert.class</url>

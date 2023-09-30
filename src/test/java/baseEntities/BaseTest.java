@@ -6,6 +6,7 @@ import configuration.ReadProperties;
 import helper.DataHelper;
 import io.qameta.allure.selenide.AllureSelenide;
 import models.UserForUITest;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import steps.*;
 import org.apache.log4j.Logger;
@@ -32,9 +33,13 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown(ITestResult result) {
+        if (!result.isSuccess()) {
+            System.out.println("Make screenshot");
+        }
         closeWebDriver();
     }
+
 
     private void setConfigurationProp() {
         Configuration.baseUrl = ReadProperties.getUrl();
