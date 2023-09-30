@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class BaseTest {
-    protected StartStep mStartStep;
+
     protected TestmoLoginStep mTestmoLoginStep;
     protected TestmoAuthStep mTestmoAuthStep;
     protected ProjectsListStep mProjectsListStep;
@@ -47,7 +47,6 @@ public class BaseTest {
     }
 
     private void initSteps() {
-        mStartStep = new StartStep();
         mTestmoLoginStep = new TestmoLoginStep();
         mTestmoAuthStep = new TestmoAuthStep();
         mProjectsListStep = new ProjectsListStep();
@@ -57,7 +56,6 @@ public class BaseTest {
 
     protected void defaultUserLogin() {
         UserForUITest mUser = DataHelper.getFirsCorrectUser();
-        mStartStep.loginButtonClick().isPageOpened();
         mTestmoLoginStep.setTestmoAccount(mUser.getTestmoAccount()).isPageOpened();
         mTestmoAuthStep.login(mUser).isPageOpened();
     }
