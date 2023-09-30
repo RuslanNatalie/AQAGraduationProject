@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Main Suite" parallel="tests" thread-count="10">
+<suite name="Main Suite" parallel="tests" thread-count="12">
 <test name="UploadFileTest">
         <classes>
             <class name="tests.gui.positive.UploadFileTest"/>
@@ -44,6 +44,22 @@
     <test name="IncorrectLengthFieldTest">
         <classes>
             <class name="tests.gui.negative.IncorrectLengthFieldTest"/>
+        </classes>
+    </test>
+
+    <test name="TestApiGet">
+        <classes>
+            <class name="tests.api.TestApiGet"/>
+        </classes>
+    </test>
+    <test name="TestApiJson">
+        <classes>
+            <class name="tests.api.TestApiJson"/>
+        </classes>
+    </test>
+    <test name="TestApiPost">
+        <classes>
+            <class name="tests.api.TestApiPost"/>
         </classes>
     </test>
 </suite>
