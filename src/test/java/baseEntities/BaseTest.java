@@ -43,6 +43,7 @@ public class BaseTest {
         Configuration.fastSetValue = true;
         Configuration.headless = false;
         Configuration.holdBrowserOpen = true;
+        System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\chromedriver.exe");
     }
 
     private void initSteps() {

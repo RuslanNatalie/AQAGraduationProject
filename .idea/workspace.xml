@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="rebase onto develop">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parallel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/parallel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/api" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -186,10 +182,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml" />
         <item itemvalue="TestNG.IncorrectDataTest.incorrectDataTest" />
-        <item itemvalue="TestNG.CreateProjectTest" />
+        <item itemvalue="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml" />
         <item itemvalue="TestNG.CreateProjectTest.createProjectTest" />
+        <item itemvalue="TestNG.CreateProjectTest" />
         <item itemvalue="TestNG.BoundaryProjectTest" />
       </list>
     </recent_temporary>
@@ -283,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695551832558</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="cicd">
+      <created>1696094124800</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696094124800</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +322,8 @@
     <MESSAGE value="добавление тестов(создание сущности,загрузка файла, настройка паралелного запуска тестов)" />
     <MESSAGE value="добавление тестов диалогового окна, всплывающего сообщения, удаления сущности," />
     <MESSAGE value="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление теста на проверку поля для ввода на граничные значения&#10;,на использование некорректных данных,на ввод данных превышающих допустимые" />
+    <MESSAGE value="cicd" />
+    <option name="LAST_COMMIT_MESSAGE" value="cicd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
