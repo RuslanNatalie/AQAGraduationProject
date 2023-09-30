@@ -6,6 +6,7 @@ import configuration.ReadProperties;
 import helper.DataHelper;
 import io.qameta.allure.selenide.AllureSelenide;
 import models.UserForUITest;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import steps.*;
 import org.apache.log4j.Logger;
@@ -14,7 +15,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class BaseTest {
-    protected StartStep mStartStep;
+
     protected TestmoLoginStep mTestmoLoginStep;
     protected TestmoAuthStep mTestmoAuthStep;
     protected ProjectsListStep mProjectsListStep;
@@ -32,9 +33,13 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown(ITestResult result) {
+        if (!result.isSuccess()) {
+            System.out.println("Make screenshot");
+        }
         closeWebDriver();
     }
+
 
     private void setConfigurationProp() {
         Configuration.baseUrl = ReadProperties.getUrl();
@@ -42,11 +47,11 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         Configuration.fastSetValue = true;
         Configuration.headless = false;
-        Configuration.holdBrowserOpen = true;
+     //   Configuration.holdBrowserOpen = true;
+        System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\chromedriver.exe");
     }
 
     private void initSteps() {
-        mStartStep = new StartStep();
         mTestmoLoginStep = new TestmoLoginStep();
         mTestmoAuthStep = new TestmoAuthStep();
         mProjectsListStep = new ProjectsListStep();
@@ -56,7 +61,6 @@ public class BaseTest {
 
     protected void defaultUserLogin() {
         UserForUITest mUser = DataHelper.getFirsCorrectUser();
-        mStartStep.loginButtonClick().isPageOpened();
         mTestmoLoginStep.setTestmoAccount(mUser.getTestmoAccount()).isPageOpened();
         mTestmoAuthStep.login(mUser).isPageOpened();
     }

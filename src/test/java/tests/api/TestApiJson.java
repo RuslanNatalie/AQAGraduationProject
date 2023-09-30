@@ -14,7 +14,7 @@ import static io.restassured.RestAssured.*;
 
 public class TestApiJson extends BaseTestApi {
 
-    static Logger logger = LogManager.getLogger(TestApiPost.class);
+    static Logger logger = LogManager.getLogger(TestApiJson.class);
 
     @Test
     public void postAutoRunGson() {
@@ -43,9 +43,9 @@ public class TestApiJson extends BaseTestApi {
     @Test
     public void getUser() {
         User expectedUser = User.builder()
-            .name("Natalie")
-            .timezone("Europe/Minsk")
-            .build();
+                .name("Natalie")
+                .timezone("Europe/Minsk")
+                .build();
 
         User actualUser = given()
                 .get(Endpoints.GET_USER)
