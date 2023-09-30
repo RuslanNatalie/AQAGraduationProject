@@ -2,9 +2,12 @@ package pages;
 
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class StartPage extends BasePage {
     private final By loginButtonLocator = By.xpath("//*[@class='navbar-item navbar-item--small is-hidden-until-widescreen']");
@@ -23,6 +26,7 @@ public class StartPage extends BasePage {
     }
 
     public void loginButtonClick() {
-        getLoginButton().click();
+        JavascriptExecutor executor = (JavascriptExecutor) getWebDriver();
+        executor.executeScript("arguments[0].click();", getLoginButton());
     }
 }
