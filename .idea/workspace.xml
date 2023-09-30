@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="cicd" />
+    <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="cicd">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/gui/api/TestApiGet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/gui/api/TestApiJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/gui/api/TestApiPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,41 +103,6 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.TestApiGet">
-    <configuration name="CreateProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQAGraduationProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.gui.positive.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.gui.positive" />
-      <option name="MAIN_CLASS_NAME" value="tests.gui.positive.CreateProjectTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateProjectTest.createProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQAGraduationProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.gui.positive.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.gui.positive" />
-      <option name="MAIN_CLASS_NAME" value="tests.gui.positive.CreateProjectTest" />
-      <option name="METHOD_NAME" value="createProjectTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="D:/qa21onl/course/src/main/resources/parallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAGraduationProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/parallel.xml" />
@@ -178,13 +148,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestApiJson" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQAGraduationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.TestApiJson" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestApiPost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQAGraduationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.TestApiPost" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestApiGet" />
+        <item itemvalue="TestNG.TestApiPost" />
+        <item itemvalue="TestNG.TestApiJson" />
         <item itemvalue="TestNG.IncorrectDataTest.incorrectDataTest" />
         <item itemvalue="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml" />
-        <item itemvalue="TestNG.CreateProjectTest.createProjectTest" />
-        <item itemvalue="TestNG.CreateProjectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696095127868</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="cicd">
+      <created>1696095644426</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696095644426</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
