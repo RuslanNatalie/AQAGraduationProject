@@ -22,16 +22,14 @@ public class BaseTest {
     protected AdminProjectStep mAdminProjectStep;
     static Logger logger = Logger.getLogger(BaseTest.class);
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         org.apache.log4j.BasicConfigurator.configure();
         initSteps();
         setConfigurationProp();
         open("/");
-        logger.info("Browser is started");
     }
-
 
     @AfterMethod
     public void tearDown() {
@@ -56,7 +54,7 @@ public class BaseTest {
         mAdminProjectStep = new AdminProjectStep();
     }
 
-    protected void defaultUserLogin(){
+    protected void defaultUserLogin() {
         UserForUITest mUser = DataHelper.getFirsCorrectUser();
         mStartStep.loginButtonClick().isPageOpened();
         mTestmoLoginStep.setTestmoAccount(mUser.getTestmoAccount()).isPageOpened();

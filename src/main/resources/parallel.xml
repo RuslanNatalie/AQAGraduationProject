@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Main Suite" parallel="tests" thread-count="10">
-    <test name="SuccessLoginTest">
-        <classes>
-            <class name="tests.gui.positive.CreateProjectTest"/>
-        </classes>
-    </test>
-    <test name="UploadFileTest">
+<test name="UploadFileTest">
         <classes>
             <class name="tests.gui.positive.UploadFileTest"/>
+        </classes>
+    </test>
+    <test name="CreateProjectTest">
+        <classes>
+            <class name="tests.gui.positive.CreateProjectTest"/>
         </classes>
     </test>
     <test name="DeleteWorkflowTest">
