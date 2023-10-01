@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="cicd parallel">
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/DataProviderForUploadImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helper/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/DataHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/gui/positive/UploadFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/gui/positive/UploadFileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/data/DataProviderForUploadImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/DataProviderForUploadImage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,9 +86,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\qa21onl\course\src\test\resources" />
       <recent name="D:\qa21onl\course\src\main\resources" />
       <recent name="D:\qa21onl\course\src\test\java\elements" />
-      <recent name="D:\qa21onl\course\src\test\resources" />
       <recent name="D:\qa21onl\course\src\main" />
       <recent name="D:\qa21onl\course\src" />
     </key>
@@ -104,7 +100,7 @@
       <recent name="models" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml">
+  <component name="RunManager" selected="TestNG.UploadFileTest.handleUploadFileTest">
     <configuration name="D:/qa21onl/course/src/main/resources/parallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAGraduationProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/parallel.xml" />
@@ -186,8 +182,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml" />
         <item itemvalue="TestNG.UploadFileTest.handleUploadFileTest" />
+        <item itemvalue="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml" />
         <item itemvalue="TestNG.UploadFileTest" />
         <item itemvalue="TestNG.TestApiGet" />
         <item itemvalue="TestNG.TestApiJson" />
@@ -229,7 +225,7 @@
       <workItem from="1696109316266" duration="4697000" />
       <workItem from="1696151556109" duration="4307000" />
       <workItem from="1696178942505" duration="9116000" />
-      <workItem from="1696195100828" duration="765000" />
+      <workItem from="1696195100828" duration="1445000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1694448214329</created>
@@ -357,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696181051691</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="cicd parallel">
+      <created>1696195950496</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1696195950496</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,14 +474,14 @@
           <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/gui/positive/UploadFileTest.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/data/DataProviderForUploadImage.java</url>
           <line>9</line>
           <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/data/DataProviderForUploadImage.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="120" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
