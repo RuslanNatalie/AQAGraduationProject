@@ -44,7 +44,7 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         Configuration.fastSetValue = true;
         Configuration.headless = false;
-     //   Configuration.holdBrowserOpen = true;
+        //   Configuration.holdBrowserOpen = true;
         System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\chromedriver.exe");
     }
 
@@ -60,7 +60,7 @@ public class BaseTest {
     protected void defaultUserLogin() {
         UserForUITest mUser = DataHelper.getFirsCorrectUser();
         mStartStep.loginButtonClick().isPageOpened();
-        mTestmoLoginStep.setTestmoAccount(mUser.getTestmoAccount()).isPageOpened();
+        mTestmoLoginStep.setTestmoAccount(mUser).isPageOpened();
         mTestmoAuthStep.login(mUser).isPageOpened();
     }
 }

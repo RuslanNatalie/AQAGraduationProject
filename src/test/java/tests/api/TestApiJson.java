@@ -16,7 +16,7 @@ public class TestApiJson extends BaseTestApi {
 
     static Logger logger = LogManager.getLogger(TestApiJson.class);
 
-    @Test
+    @Test(groups = "positive")
     public void postAutoRunGson() {
 
         logger.info(authentication);
@@ -40,7 +40,7 @@ public class TestApiJson extends BaseTestApi {
         logger.info(id);
     }
 
-    @Test
+    @Test(groups = "positive")
     public void getUser() {
         User expectedUser = User.builder()
                 .name("Natalie")

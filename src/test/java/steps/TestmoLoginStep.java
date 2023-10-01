@@ -1,6 +1,7 @@
 package steps;
 
 import baseEntities.BaseStep;
+import models.UserForUITest;
 import pages.TestmoAuthPage;
 
 public class TestmoLoginStep extends BaseStep {
@@ -8,9 +9,9 @@ public class TestmoLoginStep extends BaseStep {
         super();
     }
 
-    public TestmoAuthPage setTestmoAccount(String testmoAccount) {
+    public TestmoAuthPage setTestmoAccount( UserForUITest mUser) {
         mTestmoLoginPage.loginAccountAreaClick();
-        mTestmoLoginPage.insertTestmoAccount(testmoAccount);
+        mTestmoLoginPage.insertTestmoAccount(mUser.getTestmoAccount());
         mTestmoLoginPage.goButtonClick();
         return mTestmoAuthPage;
     }

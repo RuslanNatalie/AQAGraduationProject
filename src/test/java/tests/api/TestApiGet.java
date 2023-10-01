@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 public class TestApiGet extends BaseTestApi {
     static Logger logger = LogManager.getLogger(TestApiGet.class);
 
-    @Test
+    @Test(groups = "positive")
     public void getUsers() {
 
         logger.info(authentication);
@@ -27,7 +27,7 @@ public class TestApiGet extends BaseTestApi {
                 .statusCode(HttpStatus.SC_OK);
     }
 
-    @Test
+    @Test(groups = "positive")
     public void getUsersId() {
 
         int autoRunID = 30;
@@ -44,7 +44,7 @@ public class TestApiGet extends BaseTestApi {
                 .statusCode(HttpStatus.SC_OK);
     }
 
-    @Test
+    @Test(groups = "negative")
     public void getRoles() {
 
         logger.info(authentication);

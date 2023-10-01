@@ -10,6 +10,6 @@ public class CreateProjectTest extends BaseTest {
     public void createProjectTest() {
         defaultUserLogin();
         mProjectsListStep.openAddProjectDialogWindow();
-        mProjectsListStep.createProject(DataHelper.geProject()).isPageOpened();
+        mProjectsListStep.createProject(DataHelper.getProject()).isPageOpened();
     }
 }

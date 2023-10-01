@@ -1,65 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Main Suite" parallel="tests" thread-count="12">
-<test name="UploadFileTest">
+<suite name="Main Suite" parallel="methods" thread-count="12">
+    <test name="positive">
         <classes>
             <class name="tests.gui.positive.UploadFileTest"/>
-        </classes>
-    </test>
-    <test name="CreateProjectTest">
-        <classes>
             <class name="tests.gui.positive.CreateProjectTest"/>
-        </classes>
-    </test>
-    <test name="DeleteWorkflowTest">
-        <classes>
-            <class name="tests.gui.positive.DeleteWorkflowTest"/>
-        </classes>
-    </test>
-    <test name="DialogWindowTest">
-        <classes>
             <class name="tests.gui.positive.DialogWindowTest"/>
-        </classes>
-    </test>
-    <test name="PopUpWindowTest">
-        <classes>
             <class name="tests.gui.positive.PopUpWindowTest"/>
-        </classes>
-    </test>
-    <test name="BoundaryProjectTest">
-        <classes>
             <class name="tests.gui.positive.BoundaryProjectTest"/>
+            <class name="tests.gui.positive.DeleteWorkflowTest"/>
+            <class name="tests.api.TestApiPost"/>
+            <class name="tests.api.TestApiJson"/>
+            <class name="tests.api.TestApiGet">
+                <methods>
+                    <exclude name="getRoles"/>
+                </methods>
+            </class>
         </classes>
     </test>
-    <test name="DeleteProjectTest">
+    <test name="negative">
         <classes>
             <class name="tests.gui.negative.DeleteProjectTest"/>
-        </classes>
-    </test>
-    <test name="IncorrectDataTest">
-        <classes>
             <class name="tests.gui.negative.IncorrectDataTest"/>
-        </classes>
-    </test>
-    <test name="IncorrectLengthFieldTest">
-        <classes>
             <class name="tests.gui.negative.IncorrectLengthFieldTest"/>
-        </classes>
-    </test>
-
-    <test name="TestApiGet">
-        <classes>
-            <class name="tests.api.TestApiGet"/>
-        </classes>
-    </test>
-    <test name="TestApiJson">
-        <classes>
-            <class name="tests.api.TestApiJson"/>
-        </classes>
-    </test>
-    <test name="TestApiPost">
-        <classes>
-            <class name="tests.api.TestApiPost"/>
+            <class name="tests.api.TestApiGet">
+                <methods>
+                    <exclude name="getUsers"/>
+                    <exclude name="getUsersId"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

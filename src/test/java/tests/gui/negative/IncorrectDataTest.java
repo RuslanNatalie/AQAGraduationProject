@@ -12,7 +12,7 @@ public class IncorrectDataTest extends BaseTest {
     public void incorrectDataTest() {
         UserForUITest mUser = DataHelper.getFirsCorrectUser();
         mStartStep.loginButtonClick().isPageOpened();
-        mTestmoLoginStep.setTestmoAccount(mUser.getTestmoAccount()).isPageOpened();
+        mTestmoLoginStep.setTestmoAccount(mUser).isPageOpened();
         Assert.assertEquals(mTestmoAuthStep.loginWithIncorrectData(mUser), "The email must be a valid email address.");
     }
 }

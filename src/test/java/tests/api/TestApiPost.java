@@ -16,7 +16,7 @@ public class TestApiPost extends BaseTestApi {
 
     static Logger logger = LogManager.getLogger(TestApiPost.class);
 
-    @Test
+    @Test(groups = "positive")
     public void postAutoRun() {
 
         logger.info(authentication);
