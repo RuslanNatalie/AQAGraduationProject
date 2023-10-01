@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00f417fb-5ebe-495f-b00d-170b91fc4a95" name="Changes" comment="cicd parallel">
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/DataProviderForUploadImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parallel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/parallel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/helper/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/DataHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/TestmoLoginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/TestmoLoginStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/TestApiGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/TestApiGet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/TestApiJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/TestApiJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/TestApiPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/TestApiPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/gui/negative/IncorrectDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/gui/negative/IncorrectDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/gui/positive/CreateProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/gui/positive/CreateProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/gui/positive/UploadFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/gui/positive/UploadFileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +75,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ToolWindowRun.ShowToolbar": "false",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/qa21onl/QA21ONL",
+    "last_opened_file_path": "D:/qa21onl/course/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,11 +97,11 @@
       <recent name="D:\qa21onl\course\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="data" />
       <recent name="baseEntities" />
       <recent name="tests.negative" />
       <recent name="tests.positive" />
       <recent name="models" />
-      <recent name="tests" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml">
@@ -113,24 +109,6 @@
       <module name="AQAGraduationProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/parallel.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IncorrectDataTest.incorrectDataTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQAGraduationProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.gui.negative.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.gui.negative" />
-      <option name="MAIN_CLASS_NAME" value="tests.gui.negative.IncorrectDataTest" />
-      <option name="METHOD_NAME" value="incorrectDataTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -171,17 +149,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestApiPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UploadFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAGraduationProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="tests.gui.positive.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.TestApiPost" />
+      <option name="PACKAGE_NAME" value="tests.gui.positive" />
+      <option name="MAIN_CLASS_NAME" value="tests.gui.positive.UploadFileTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadFileTest.handleUploadFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQAGraduationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.gui.positive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.gui.positive" />
+      <option name="MAIN_CLASS_NAME" value="tests.gui.positive.UploadFileTest" />
+      <option name="METHOD_NAME" value="handleUploadFileTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -191,10 +187,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.D:/qa21onl/course/src/main/resources/parallel.xml" />
+        <item itemvalue="TestNG.UploadFileTest.handleUploadFileTest" />
+        <item itemvalue="TestNG.UploadFileTest" />
         <item itemvalue="TestNG.TestApiGet" />
         <item itemvalue="TestNG.TestApiJson" />
-        <item itemvalue="TestNG.TestApiPost" />
-        <item itemvalue="TestNG.IncorrectDataTest.incorrectDataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +228,8 @@
       <workItem from="1696073563438" duration="1328000" />
       <workItem from="1696109316266" duration="4697000" />
       <workItem from="1696151556109" duration="4307000" />
-      <workItem from="1696178942505" duration="2083000" />
+      <workItem from="1696178942505" duration="9116000" />
+      <workItem from="1696195100828" duration="765000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1694448214329</created>
@@ -353,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696113907138</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="cicd parallel">
+      <created>1696181051691</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1696181051691</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,12 +427,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/helper/DataHelper.java</url>
-          <line>24</line>
+          <line>25</line>
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/helper/DataHelper.java</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -443,16 +447,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="106" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/ProjectsListPage.java</url>
           <line>123</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
@@ -463,13 +457,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/helper/DataHelper.java</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/tests/gui/positive/CreateProjectTest.java</url>
           <line>10</line>
           <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/data/DataProviderForUploadImage.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/gui/positive/UploadFileTest.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/data/DataProviderForUploadImage.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="118" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

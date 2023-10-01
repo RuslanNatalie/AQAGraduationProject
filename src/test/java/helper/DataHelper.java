@@ -12,6 +12,7 @@ public class DataHelper {
         return pathToFile.substring(1, pathToFile.length());
     }
 
+
     public static UserForUITest getFirsCorrectUser() {
         UserForUITest mUser = new UserForUITest.Builder()
                 .withTestmoAccount(ReadProperties.getTestmoAccount())
