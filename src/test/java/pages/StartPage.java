@@ -1,7 +1,6 @@
 package pages;
 
 import baseEntities.BasePage;
-import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -27,7 +26,6 @@ public class StartPage extends BasePage {
         return $(loginButtonLocator);
     }
 
-    @Step("Open start page and click on login button")
     public void loginButtonClick() {
         JavascriptExecutor executor = (JavascriptExecutor) getWebDriver();
         executor.executeScript("arguments[0].click();", getLoginButton());
