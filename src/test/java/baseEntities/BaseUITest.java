@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import configuration.ReadProperties;
 import helper.DataHelper;
+import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import models.UserForUITest;
 import org.testng.ITestResult;
@@ -57,6 +58,7 @@ public class BaseUITest extends BaseTest{
         mAdminProjectStep = new AdminProjectStep();
     }
 
+    @Step("Default user login case")
     protected void defaultUserLogin() {
         UserForUITest mUser = DataHelper.getFirsCorrectUser();
         mStartStep.loginButtonClick().isPageOpened();

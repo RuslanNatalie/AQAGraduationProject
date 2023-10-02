@@ -9,7 +9,7 @@ public class StartStep extends BaseStep {
         super();
     }
 
-    @Step("Open start page and click on login button")
+    @Step("Click on login button")
     public TestmoLoginPage loginButtonClick() {
         mStartPage.loginButtonClick();
         return mTestmoLoginPage;
