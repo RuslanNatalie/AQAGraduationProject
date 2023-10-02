@@ -1,13 +1,13 @@
 package tests.gui.negative;
 
-import baseEntities.BaseTest;
+import baseEntities.BaseUITest;
 import data.BoundaryValues;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class IncorrectLengthFieldTest extends BaseTest {
+public class IncorrectLengthFieldTest extends BaseUITest {
 
     @Test(description = "Тест на ввод данных превышающих допустимые", groups = "negative")
     public void incorrectLengthFieldTest() {

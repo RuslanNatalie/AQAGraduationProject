@@ -1,6 +1,6 @@
 package tests.gui.positive;
 
-import baseEntities.BaseTest;
+import baseEntities.BaseUITest;
 import com.codeborne.selenide.WebDriverRunner;
 import data.BoundaryValues;
 import org.testng.Assert;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class BoundaryProjectTest extends BaseTest {
+public class BoundaryProjectTest extends BaseUITest {
 
     @Test(description = "Тест на граничные значения", groups = "positive")
     public void boundaryProjectTest() {

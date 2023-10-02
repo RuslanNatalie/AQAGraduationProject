@@ -1,11 +1,11 @@
 package tests.gui.positive;
 
-import baseEntities.BaseTest;
+import baseEntities.BaseUITest;
 import data.DataProviderForUploadImage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class UploadFileTest extends BaseTest {
+public class UploadFileTest extends BaseUITest {
 
 
     @Test(description = "Тест на загрузку файла изображения во время создания проекта",

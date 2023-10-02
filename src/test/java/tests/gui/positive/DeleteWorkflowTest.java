@@ -1,13 +1,13 @@
 package tests.gui.positive;
 
-import baseEntities.BaseTest;
+import baseEntities.BaseUITest;
 import com.codeborne.selenide.WebDriverRunner;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class DeleteWorkflowTest extends BaseTest {
+public class DeleteWorkflowTest extends BaseUITest {
     private final static String pagePath = "admin/workflows";
 
     @Test(description = "Тест на удаление сущности", groups = "positive")
