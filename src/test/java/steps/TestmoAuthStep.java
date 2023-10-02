@@ -1,6 +1,7 @@
 package steps;
 
 import baseEntities.BaseStep;
+import io.qameta.allure.Step;
 import models.UserForUITest;
 import pages.ProjectsListPage;
 
@@ -9,6 +10,7 @@ public class TestmoAuthStep extends BaseStep {
         super();
     }
 
+    @Step("auth with login and password")
     public ProjectsListPage login(UserForUITest user) {
         mTestmoAuthPage.insertTestmoLoginAndPassword(user);
         mTestmoAuthPage.disableCheckBox();

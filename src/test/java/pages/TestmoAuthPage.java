@@ -2,6 +2,7 @@ package pages;
 
 import baseEntities.BasePage;
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
 import models.UserForUITest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -47,6 +48,7 @@ public class TestmoAuthPage extends BasePage {
     }
 
 
+    @Step("insert testmo login and password in fields")
     public void insertTestmoLoginAndPassword(UserForUITest user) {
         getTestmoEmailFieldLocator().sendKeys(user.getLogin());
         getTestmoPasswordFieldLocator().sendKeys(user.getPassword());
@@ -58,6 +60,7 @@ public class TestmoAuthPage extends BasePage {
     }
 
 
+    @Step("click on login button and open next page")
     public void loginButtonClick() {
         getTestmoLogintButtonLocator().click();
     }
@@ -68,6 +71,7 @@ public class TestmoAuthPage extends BasePage {
         return getTestmoLoginErrorMessageLocator().getText();
     }
 
+    @Step("disable check box")
     public void disableCheckBox() {
         if (getTestmoCheckBoxLocator().isSelected() == false) {
             getTestmoCheckBoxLocator().click();

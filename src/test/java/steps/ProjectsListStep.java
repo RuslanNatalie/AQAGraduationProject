@@ -1,6 +1,7 @@
 package steps;
 
 import baseEntities.BaseStep;
+import io.qameta.allure.Step;
 import models.create_project.Project;
 import pages.ProjectDetailsPage;
 
@@ -10,10 +11,12 @@ public class ProjectsListStep extends BaseStep {
         super();
     }
 
+    @Step("open DialogWindow after click on addProjectButton")
     public void openAddProjectDialogWindow() {
         mProjectsListPage.addProjectButtonClick();
     }
 
+    @Step("check opening DialogWindow")
     public String getAddProjectDialogTitleTextWindow() {
         return mProjectsListPage.checkDialogWindowOpen();
     }

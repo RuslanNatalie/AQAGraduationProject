@@ -13,7 +13,7 @@ public abstract class BasePage {
 
     protected abstract By getPageIdentifier();
 
-    @Description("Check is page opened")
+    @Step("Check is page opened")
     public void isPageOpened() {
         $(getPageIdentifier()).shouldBe(visible);
     }
